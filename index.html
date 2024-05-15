@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
+
+    <div id="app">
+       
+        <h1>ToDo List</h1>
+        <input type="text" v-model="newTodo" placeholder="Add a new ToDo">
+        <button @click="addTodo">Add</button>
+        <ul>
+          <li v-for="todo in todos" :key="todo">
+            {{ todo }}
+            <span class="delete-icon" @click="removeTodo(todo)"><i class="fas fa-times"></i></span>
+          </li>
+        </ul>
+  </div>
+
+    </div>
+    
+
+    <script src="./main.js"></script>
+</body>
+</html>
